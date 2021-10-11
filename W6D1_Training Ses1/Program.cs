@@ -21,6 +21,8 @@ namespace W6D1_Training_Ses1
 
             Complex complex3 = new Complex(-1, 0);
             Console.WriteLine("Sqrt of complex number is " + Complex.Sqrt(complex3));
+            Console.WriteLine("complex number in format" + complex2.Real + "+" + complex2.Imaginary + "i"));
+            Console.WriteLine("complex number in string " + complex2.ToString());
             Console.ReadLine();
         }
     }
