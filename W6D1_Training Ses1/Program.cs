@@ -9,52 +9,66 @@ namespace W6D1_Training_Ses1
 {
     class Program
     {
-        private static void print(Tuple<int,int,string>tuple)
+        private static void print(Tuple<int, int, string> tuple)
         {
             Console.WriteLine(tuple.Item1);
             Console.WriteLine(tuple.Item2);
             Console.WriteLine(tuple.Item3);
         }
 
-        private Tuple<int,string,string> returnTuple()
+        private Tuple<int, string, string> returnTuple()
         {
             return Tuple.Create(1, "jack", "gary");
         }
+
+        private (int,string,string) getValueTuple()
+        {
+            return (1, "someone", "john");
+        }
         static void Main(string[] args)
         {
-            Tuple<int, double, string> tuple = new Tuple<int, double, string>(1, 5.3, "John");
-            Console.WriteLine(tuple.Item1);
-            Console.WriteLine(tuple.Item2);
-            Console.WriteLine(tuple.Item3);
-            Console.WriteLine();
+            ValueTuple<int, string, string> valuetuple2 = (1, "someone", "john");
+            (int,string,string) valuetuple3 = (1, "someone", "john");
+            (int id, string fn, string ln) person = (1, "someone", "john");
+            Console.WriteLine(person.id);
+            Console.WriteLine(person.fn);
+            Console.WriteLine(person.ln);
 
-            var tuple2 = Tuple.Create(1, 1, "john");        //auto generate
-            var tuple3 = Tuple.Create(1, 2, 3, 4, 5, 6, 7, 8);
-            Console.WriteLine(tuple3.Item1);
-            Console.WriteLine(tuple3.Item2);
-            Console.WriteLine(tuple3.Item3);
-            Console.WriteLine(tuple3.Item4);
-            Console.WriteLine(tuple3.Item5);
-            Console.WriteLine(tuple3.Item6);
-            Console.WriteLine(tuple3.Item7);
-            Console.WriteLine(tuple3.Rest); //to access last item you cannot use item8 --> item 8 is a nested tuple
-            Console.WriteLine();
+            Program p = new Program();
+            (int id, string firstname, string lastname) = p.getValueTuple();    //normal variables
+            //Tuple<int, double, string> tuple = new Tuple<int, double, string>(1, 5.3, "John");
+            //Console.WriteLine(tuple.Item1);
+            //Console.WriteLine(tuple.Item2);
+            //Console.WriteLine(tuple.Item3);
+            //Console.WriteLine();
 
-            var tuple4 = Tuple.Create(1, 2, 3, 4, 5, 6, 7, Tuple.Create(8,9,10));
-            Console.WriteLine(tuple4.Item1);
-            Console.WriteLine(tuple4.Item2);
-            Console.WriteLine(tuple4.Item3);
-            Console.WriteLine(tuple4.Item4);
-            Console.WriteLine(tuple4.Item5);
-            Console.WriteLine(tuple4.Item6);
-            Console.WriteLine(tuple4.Item7);
-            Console.WriteLine(tuple4.Rest.Item1.Item1);
-            Console.WriteLine(tuple4.Rest.Item1.Item2);
-            Console.WriteLine(tuple4.Rest.Item1.Item3);
+            //var tuple2 = Tuple.Create(1, 1, "john");        //auto generate
+            //var tuple3 = Tuple.Create(1, 2, 3, 4, 5, 6, 7, 8);
+            //Console.WriteLine(tuple3.Item1);
+            //Console.WriteLine(tuple3.Item2);
+            //Console.WriteLine(tuple3.Item3);
+            //Console.WriteLine(tuple3.Item4);
+            //Console.WriteLine(tuple3.Item5);
+            //Console.WriteLine(tuple3.Item6);
+            //Console.WriteLine(tuple3.Item7);
+            //Console.WriteLine(tuple3.Rest); //to access last item you cannot use item8 --> item 8 is a nested tuple
+            //Console.WriteLine();
 
-            print(tuple2);
+            //var tuple4 = Tuple.Create(1, 2, 3, 4, 5, 6, 7, Tuple.Create(8,9,10));
+            //Console.WriteLine(tuple4.Item1);
+            //Console.WriteLine(tuple4.Item2);
+            //Console.WriteLine(tuple4.Item3);
+            //Console.WriteLine(tuple4.Item4);
+            //Console.WriteLine(tuple4.Item5);
+            //Console.WriteLine(tuple4.Item6);
+            //Console.WriteLine(tuple4.Item7);
+            //Console.WriteLine(tuple4.Rest.Item1.Item1);
+            //Console.WriteLine(tuple4.Rest.Item1.Item2);
+            //Console.WriteLine(tuple4.Rest.Item1.Item3);
 
-            
+            //print(tuple2);
+
+
 
             Console.ReadLine();
 
@@ -132,5 +146,6 @@ namespace W6D1_Training_Ses1
             //Console.WriteLine("complex number in string " + complex2.ToString());
             //Console.ReadLine();
         }
+
     }
 }
