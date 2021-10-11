@@ -18,6 +18,9 @@ namespace W6D1_Training_Ses1
             Console.WriteLine("2nd Complex number is {0}", complex2);
 
             Console.WriteLine("sum of 2 complex number " + (complex1+complex2));
+
+            Complex complex3 = new Complex(-1, 0);
+            Console.WriteLine("Sqrt of complex number is " + Complex.Sqrt(complex3));
             Console.ReadLine();
         }
     }
