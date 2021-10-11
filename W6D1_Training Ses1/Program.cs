@@ -9,30 +9,76 @@ namespace W6D1_Training_Ses1
 {
     class Program
     {
+        private static void print(Tuple<int,int,string>tuple)
+        {
+            Console.WriteLine(tuple.Item1);
+            Console.WriteLine(tuple.Item2);
+            Console.WriteLine(tuple.Item3);
+        }
+
+        private Tuple<int,string,string> returnTuple()
+        {
+            return Tuple.Create(1, "jack", "gary");
+        }
         static void Main(string[] args)
         {
+            Tuple<int, double, string> tuple = new Tuple<int, double, string>(1, 5.3, "John");
+            Console.WriteLine(tuple.Item1);
+            Console.WriteLine(tuple.Item2);
+            Console.WriteLine(tuple.Item3);
+            Console.WriteLine();
 
-            var guid1 = Guid.NewGuid();
-            var guid2 = Guid.NewGuid();
+            var tuple2 = Tuple.Create(1, 1, "john");        //auto generate
+            var tuple3 = Tuple.Create(1, 2, 3, 4, 5, 6, 7, 8);
+            Console.WriteLine(tuple3.Item1);
+            Console.WriteLine(tuple3.Item2);
+            Console.WriteLine(tuple3.Item3);
+            Console.WriteLine(tuple3.Item4);
+            Console.WriteLine(tuple3.Item5);
+            Console.WriteLine(tuple3.Item6);
+            Console.WriteLine(tuple3.Item7);
+            Console.WriteLine(tuple3.Rest); //to access last item you cannot use item8 --> item 8 is a nested tuple
+            Console.WriteLine();
 
-            Console.WriteLine("Equality check " + (guid1 == guid2));
+            var tuple4 = Tuple.Create(1, 2, 3, 4, 5, 6, 7, Tuple.Create(8,9,10));
+            Console.WriteLine(tuple4.Item1);
+            Console.WriteLine(tuple4.Item2);
+            Console.WriteLine(tuple4.Item3);
+            Console.WriteLine(tuple4.Item4);
+            Console.WriteLine(tuple4.Item5);
+            Console.WriteLine(tuple4.Item6);
+            Console.WriteLine(tuple4.Item7);
+            Console.WriteLine(tuple4.Rest.Item1.Item1);
+            Console.WriteLine(tuple4.Rest.Item1.Item2);
+            Console.WriteLine(tuple4.Rest.Item1.Item3);
 
-            var bytes = new Byte[16];
-            var guid3 = new Guid(bytes);
-            Console.WriteLine($"guid value for " + guid3);
+            print(tuple2);
 
-            var guid4 = Guid.Empty;
-            Console.WriteLine("Equality check with empty guid " + (guid3 == Guid.Empty));
+            
 
-            for (int i=0; i<10;i++)
-            {
-                var guid = Guid.NewGuid();
-                Console.WriteLine($"Guid value for {i+1}th iteration : " + guid);
-            }
             Console.ReadLine();
-            
-            
-            
+
+            //var guid1 = Guid.NewGuid();
+            //var guid2 = Guid.NewGuid();
+
+            //Console.WriteLine("Equality check " + (guid1 == guid2));
+
+            //var bytes = new Byte[16];
+            //var guid3 = new Guid(bytes);
+            //Console.WriteLine($"guid value for " + guid3);
+
+            //var guid4 = Guid.Empty;
+            //Console.WriteLine("Equality check with empty guid " + (guid3 == Guid.Empty));
+
+            //for (int i=0; i<10;i++)
+            //{
+            //    var guid = Guid.NewGuid();
+            //    Console.WriteLine($"Guid value for {i+1}th iteration : " + guid);
+            //}
+            //Console.ReadLine();
+
+
+
             //BigInteger bigInteger3;
             //Console.WriteLine("Input first big int: ");
             //bigInteger3 = BigInteger.Parse(Console.ReadLine());
