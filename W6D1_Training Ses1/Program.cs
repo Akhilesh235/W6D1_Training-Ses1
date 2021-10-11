@@ -53,30 +53,47 @@ namespace W6D1_Training_Ses1
         {
             
             //Collections Example
-            List<int> list = new List<int>();
-            list.Add(1);
-            list.AddRange(new List<int>() { 1, 2, 3, 4 });
-            list.Remove(1);
-            Console.WriteLine(list.Count);         
-            foreach(int i in list)
-            {
-                Console.WriteLine(i);
-            }
+            //List<int> list = new List<int>();
+            //list.Add(1);
+            //list.AddRange(new List<int>() { 1, 2, 3, 4 });
+            //list.Remove(1);
+            //Console.WriteLine(list.Count);         
+            //foreach(int i in list)
+            //{
+            //    Console.WriteLine(i);
+            //}
 
             List<student> lst = new List<student>();
             lst.Add(new student(2, "john"));
             lst.Add(new student(1, "gary"));
             lst.Add(new student(3, "lily"));
 
-            foreach(var stu in lst)
+            foreach (var stu in lst)
+            {
+                Console.WriteLine($"student id {stu.id} and student name is {stu.name}");
+            }
+
+            var sortedList = lst.OrderBy(x => x.name).ToList();
+            Console.WriteLine("in sorted list");
+            foreach (var stu in sortedList)
+            {
+                Console.WriteLine($"student id {stu.id} and student name is {stu.name}");
+            }
+
+            sortedList.Reverse();
+            Console.WriteLine("in reverse list");
+            foreach (var stu in sortedList)
             {
                 Console.WriteLine($"student id {stu.id} and student name is {stu.name}");
             }
 
             
-            
-            
-            
+
+
+
+
+
+
             //var ukEn = new CultureInfo("en-GB");
             //var usEn = new CultureInfo("en-US");
             //var Frfr = new CultureInfo("fr-Fr");
