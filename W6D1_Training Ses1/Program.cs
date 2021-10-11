@@ -53,25 +53,54 @@ namespace W6D1_Training_Ses1
         {
 
             //Stacks and Queue Examples
-            Stack<int> stk = new Stack<int>();
-            stk.Push(1);
-            stk.Push(2);
-            stk.Push(3);
-            Console.WriteLine("size of stack " + stk.Count);
-            
-            Console.WriteLine("popping last element");
-            Console.WriteLine(stk.Pop());
-            
-            Console.WriteLine("size of stack " + stk.Count);
-            
-            Console.WriteLine("peeking last element");
-            Console.WriteLine(stk.Peek());
-            Console.WriteLine("size of stack " + stk.Count);
-            
-            Console.WriteLine("clearing the stack");
-            stk.Clear();
-            Console.WriteLine("size of stack " + stk.Count);
+            //Stack<int> stk = new Stack<int>();
+            //stk.Push(1);
+            //stk.Push(2);
+            //stk.Push(3);
+            //Console.WriteLine("size of stack " + stk.Count);
 
+            //Console.WriteLine();
+            //Console.WriteLine("popping last element");
+            //Console.WriteLine(stk.Pop());
+
+            //Console.WriteLine();
+            //Console.WriteLine("size of stack " + stk.Count);
+
+            //Console.WriteLine();
+            //Console.WriteLine("peeking last element");
+            //Console.WriteLine(stk.Peek());
+            //Console.WriteLine("size of stack " + stk.Count);
+
+            //Console.WriteLine();
+            //Console.WriteLine("clearing the stack");
+            //stk.Clear();
+            //Console.WriteLine("size of stack " + stk.Count);
+
+
+            Queue<int> q = new Queue<int>();
+            q.Enqueue(10);
+            q.Enqueue(20);
+            q.Enqueue(30);
+
+            Console.WriteLine();
+            Console.WriteLine("Size of queue " + q.Count);
+            Console.WriteLine();
+
+            Console.WriteLine("removing first element");
+            Console.WriteLine(q.Dequeue());
+            Console.WriteLine();
+
+            Console.WriteLine("Size of queue " + q.Count);
+
+            Console.WriteLine();
+            Console.WriteLine("peeking first queue");
+            Console.WriteLine(q.Peek());
+            Console.WriteLine("size of stack " + q.Count);
+
+            Console.WriteLine();
+            Console.WriteLine("clearing queue");
+            q.Clear();
+            Console.WriteLine("size of stack " + q.Count);
 
             //Collections Example
             //List<int> list = new List<int>();
