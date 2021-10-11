@@ -11,38 +11,41 @@ namespace W6D1_Training_Ses1
     {
         static void Main(string[] args)
         {
-          
-            BigInteger bigInteger3;
-            Console.WriteLine("Input first big int: ");
-            bigInteger3 = BigInteger.Parse(Console.ReadLine());
-            BigInteger bigInteger4;
-            Console.WriteLine("Input second big int: ");
-            bigInteger4 = BigInteger.Parse(Console.ReadLine());
 
-            Console.WriteLine("Addition of both big int is : " + BigInteger.Add(bigInteger3, bigInteger4));
-            Console.WriteLine("Subtraction of both big int is : " + BigInteger.Subtract(bigInteger3, bigInteger4));
-            Console.WriteLine("Multiplication of both big int is : " + BigInteger.Multiply(bigInteger3, bigInteger4));
-            Console.WriteLine("Division of both big int is : " + BigInteger.Divide(bigInteger3, bigInteger4));
-            Console.WriteLine("Remainder of both big int is : " + BigInteger.Remainder(bigInteger3, bigInteger4));
+            var guid1 = Guid.NewGuid();
+            var guid2 = Guid.NewGuid();
+
+            Console.WriteLine("Equality check " + (guid1 == guid2));
+
+            var bytes = new Byte[16];
+            var guid3 = new Guid(bytes);
+            Console.WriteLine($"guid value for " + guid3);
+
+            var guid4 = Guid.Empty;
+            Console.WriteLine("Equality check with empty guid " + (guid3 == Guid.Empty));
+
+            for (int i=0; i<10;i++)
+            {
+                var guid = Guid.NewGuid();
+                Console.WriteLine($"Guid value for {i+1}th iteration : " + guid);
+            }
             Console.ReadLine();
+            
+            
+            
+            //BigInteger bigInteger3;
+            //Console.WriteLine("Input first big int: ");
+            //bigInteger3 = BigInteger.Parse(Console.ReadLine());
+            //BigInteger bigInteger4;
+            //Console.WriteLine("Input second big int: ");
+            //bigInteger4 = BigInteger.Parse(Console.ReadLine());
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            //Console.WriteLine("Addition of both big int is : " + BigInteger.Add(bigInteger3, bigInteger4));
+            //Console.WriteLine("Subtraction of both big int is : " + BigInteger.Subtract(bigInteger3, bigInteger4));
+            //Console.WriteLine("Multiplication of both big int is : " + BigInteger.Multiply(bigInteger3, bigInteger4));
+            //Console.WriteLine("Division of both big int is : " + BigInteger.Divide(bigInteger3, bigInteger4));
+            //Console.WriteLine("Remainder of both big int is : " + BigInteger.Remainder(bigInteger3, bigInteger4));
+            //Console.ReadLine();
 
             //BigInteger bigInteger1 = new BigInteger (9090909009009009090);
             //BigInteger bigInteger2 = new BigInteger(10101010101010101010);
