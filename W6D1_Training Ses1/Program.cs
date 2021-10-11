@@ -51,6 +51,44 @@ namespace W6D1_Training_Ses1
         }
         static void Main(string[] args)
         {
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+            for(int i = 0; i<10;i++)
+            {
+
+                dict.Add(i, i * 10);
+                
+            }
+
+            if (dict.ContainsKey(4))
+            {
+                Console.WriteLine("key value pair present");
+            }
+
+            foreach(KeyValuePair<int, int > kvp in dict)
+            {
+                Console.WriteLine($"key is {kvp.Key} and value is {kvp.Value}");
+            }
+
+
+            Console.WriteLine(); 
+            var lst = dict.Values.ToList();
+            foreach(int i in lst)
+            {
+                Console.WriteLine($"Keys are {i}");
+            }
+
+
+            Console.WriteLine(); 
+            var lst2 = dict.Keys.ToList();
+            foreach (int i in lst2)
+            {
+                Console.WriteLine($"Values are {i}");
+            }
+
+            //dict.Add(1, 10);
+            //dict.Add(2, 20);
+            // dict.Add(2, 20); --> cannot duplicate your key
+
 
             //Stacks and Queue Examples
             //Stack<int> stk = new Stack<int>();
@@ -77,30 +115,30 @@ namespace W6D1_Training_Ses1
             //Console.WriteLine("size of stack " + stk.Count);
 
 
-            Queue<int> q = new Queue<int>();
-            q.Enqueue(10);
-            q.Enqueue(20);
-            q.Enqueue(30);
+            //Queue<int> q = new Queue<int>();
+            //q.Enqueue(10);
+            //q.Enqueue(20);
+            //q.Enqueue(30);
 
-            Console.WriteLine();
-            Console.WriteLine("Size of queue " + q.Count);
-            Console.WriteLine();
+            //Console.WriteLine();
+            //Console.WriteLine("Size of queue " + q.Count);
+            //Console.WriteLine();
 
-            Console.WriteLine("removing first element");
-            Console.WriteLine(q.Dequeue());
-            Console.WriteLine();
+            //Console.WriteLine("removing first element");
+            //Console.WriteLine(q.Dequeue());
+            //Console.WriteLine();
 
-            Console.WriteLine("Size of queue " + q.Count);
+            //Console.WriteLine("Size of queue " + q.Count);
 
-            Console.WriteLine();
-            Console.WriteLine("peeking first queue");
-            Console.WriteLine(q.Peek());
-            Console.WriteLine("size of stack " + q.Count);
+            //Console.WriteLine();
+            //Console.WriteLine("peeking first queue");
+            //Console.WriteLine(q.Peek());
+            //Console.WriteLine("size of stack " + q.Count);
 
-            Console.WriteLine();
-            Console.WriteLine("clearing queue");
-            q.Clear();
-            Console.WriteLine("size of stack " + q.Count);
+            //Console.WriteLine();
+            //Console.WriteLine("clearing queue");
+            //q.Clear();
+            //Console.WriteLine("size of stack " + q.Count);
 
             //Collections Example
             //List<int> list = new List<int>();
