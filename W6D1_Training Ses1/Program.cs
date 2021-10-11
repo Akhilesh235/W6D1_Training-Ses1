@@ -8,6 +8,17 @@ using System.Globalization;
 
 namespace W6D1_Training_Ses1
 {
+    class student
+    {
+        public int id;
+        public string name;
+
+        public student(int id, string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
+    }
     class Program
     {
         private static void print(Tuple<int, int, string> tuple)
@@ -26,26 +37,64 @@ namespace W6D1_Training_Ses1
         {
             return (1, "someone", "john");
         }
+
+        private static Tuple<int, bool> dosomething(int a, int b)
+        {
+            if (a>b)
+            {
+                return Tuple.Create(a - b, true);
+            }
+            else
+            {
+                return Tuple.Create(a - b, false);
+            }
+        }
         static void Main(string[] args)
         {
-            var ukEn = new CultureInfo("en-GB");
-            var usEn = new CultureInfo("en-US");
-            var Frfr = new CultureInfo("fr-Fr");
-            Console.WriteLine(ukEn.DisplayName);
-            Console.WriteLine(usEn.DisplayName);
-            Console.WriteLine(Frfr.DisplayName);
-            Console.WriteLine();
+            
+            //Collections Example
+            List<int> list = new List<int>();
+            list.Add(1);
+            list.AddRange(new List<int>() { 1, 2, 3, 4 });
+            list.Remove(1);
+            Console.WriteLine(list.Count);         
+            foreach(int i in list)
+            {
+                Console.WriteLine(i);
+            }
 
-            Console.WriteLine(usEn.Parent.DisplayName);
-            Console.WriteLine(Frfr.Parent.DisplayName);
-            Console.WriteLine();
+            List<student> lst = new List<student>();
+            lst.Add(new student(2, "john"));
+            lst.Add(new student(1, "gary"));
+            lst.Add(new student(3, "lily"));
 
-            Console.WriteLine(usEn.DateTimeFormat.FirstDayOfWeek.ToString());
-            Console.WriteLine();
+            foreach(var stu in lst)
+            {
+                Console.WriteLine($"student id {stu.id} and student name is {stu.name}");
+            }
 
-            Console.WriteLine(usEn.DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek));
-            Console.WriteLine(ukEn.DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek));
-            Console.WriteLine(Frfr.DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek));
+            
+            
+            
+            
+            //var ukEn = new CultureInfo("en-GB");
+            //var usEn = new CultureInfo("en-US");
+            //var Frfr = new CultureInfo("fr-Fr");
+            //Console.WriteLine(ukEn.DisplayName);
+            //Console.WriteLine(usEn.DisplayName);
+            //Console.WriteLine(Frfr.DisplayName);
+            //Console.WriteLine();
+
+            //Console.WriteLine(usEn.Parent.DisplayName);
+            //Console.WriteLine(Frfr.Parent.DisplayName);
+            //Console.WriteLine();
+
+            //Console.WriteLine(usEn.DateTimeFormat.FirstDayOfWeek.ToString());
+            //Console.WriteLine();
+
+            //Console.WriteLine(usEn.DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek));
+            //Console.WriteLine(ukEn.DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek));
+            //Console.WriteLine(Frfr.DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek));
 
 
             //ValueTuple<int, string, string> valuetuple2 = (1, "someone", "john");
