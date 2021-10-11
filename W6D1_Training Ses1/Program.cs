@@ -51,7 +51,17 @@ namespace W6D1_Training_Ses1
         }
         static void Main(string[] args)
         {
-            
+
+            //Stacks and Queue Examples
+            Stack<int> stk = new Stack<int>();
+            stk.Push(1);
+            stk.Push(2);
+            stk.Push(3);
+            Console.WriteLine("size of stack " + stk.Count);
+            Console.WriteLine("popping last element");
+            Console.WriteLine(stk.Pop());
+            Console.WriteLine("size of stack " + stk.Count);
+
             //Collections Example
             //List<int> list = new List<int>();
             //list.Add(1);
@@ -63,31 +73,31 @@ namespace W6D1_Training_Ses1
             //    Console.WriteLine(i);
             //}
 
-            List<student> lst = new List<student>();
-            lst.Add(new student(2, "john"));
-            lst.Add(new student(1, "gary"));
-            lst.Add(new student(3, "lily"));
+            //List<student> lst = new List<student>();
+            //lst.Add(new student(2, "john"));
+            //lst.Add(new student(1, "gary"));
+            //lst.Add(new student(3, "lily"));
 
-            foreach (var stu in lst)
-            {
-                Console.WriteLine($"student id {stu.id} and student name is {stu.name}");
-            }
+            //foreach (var stu in lst)
+            //{
+            //    Console.WriteLine($"student id {stu.id} and student name is {stu.name}");
+            //}
 
-            var sortedList = lst.OrderBy(x => x.name).ToList();
-            Console.WriteLine("in sorted list");
-            foreach (var stu in sortedList)
-            {
-                Console.WriteLine($"student id {stu.id} and student name is {stu.name}");
-            }
+            //var sortedList = lst.OrderBy(x => x.name).ToList();
+            //Console.WriteLine("in sorted list");
+            //foreach (var stu in sortedList)
+            //{
+            //    Console.WriteLine($"student id {stu.id} and student name is {stu.name}");
+            //}
 
-            sortedList.Reverse();
-            Console.WriteLine("in reverse list");
-            foreach (var stu in sortedList)
-            {
-                Console.WriteLine($"student id {stu.id} and student name is {stu.name}");
-            }
+            //sortedList.Reverse();
+            //Console.WriteLine("in reverse list");
+            //foreach (var stu in sortedList)
+            //{
+            //    Console.WriteLine($"student id {stu.id} and student name is {stu.name}");
+            //}
 
-            
+
 
 
 
