@@ -51,39 +51,63 @@ namespace W6D1_Training_Ses1
         }
         static void Main(string[] args)
         {
-            Dictionary<int, int> dict = new Dictionary<int, int>();
-            for(int i = 0; i<10;i++)
-            {
+            //0,0,2,,3,4,5,6,7,3,5,1,6,8
 
-                dict.Add(i, i * 10);
+            int[] arr = new int[] { 0, 0, 2, 3, 4, 5, 6, 7, 3, 5, 1, 6, 8 };
                 
-            }
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+            dict.Count();
+            dict.Clear();
 
-            if (dict.ContainsKey(4))
+            for(int i = 0; i<arr.Length; i++)
             {
-                Console.WriteLine("key value pair present");
-            }
+                if(dict.ContainsKey(arr[i]))
+                {
+                    dict[arr[i]]++;
+                }
 
-            foreach(KeyValuePair<int, int > kvp in dict)
-            {
-                Console.WriteLine($"key is {kvp.Key} and value is {kvp.Value}");
-            }
-
-
-            Console.WriteLine(); 
-            var lst = dict.Values.ToList();
-            foreach(int i in lst)
-            {
-                Console.WriteLine($"Keys are {i}");
+                else
+                {
+                    dict.Add(arr[i], 1);
+                }
             }
 
 
-            Console.WriteLine(); 
-            var lst2 = dict.Keys.ToList();
-            foreach (int i in lst2)
-            {
-                Console.WriteLine($"Values are {i}");
-            }
+
+            Console.ReadLine();
+
+            //for(int i = 0; i<10;i++)
+            //{
+
+            //    dict.Add(i, i * 10);
+
+            //}
+
+            //if (dict.ContainsKey(4))
+            //{
+            //    Console.WriteLine("key value pair present");
+            //}
+
+            //foreach(KeyValuePair<int, int > kvp in dict)
+            //{
+            //    Console.WriteLine($"key is {kvp.Key} and value is {kvp.Value}");
+            //}
+
+
+            //Console.WriteLine();
+            //var lst = dict.Values.ToList();
+            //foreach (int i in lst)
+            //{
+            //    Console.WriteLine($"Keys are {i}");
+            //}
+
+
+            //Console.WriteLine(); 
+            //var lst2 = dict.Keys.ToList();
+            //foreach (int i in lst2)
+            //{
+            //    Console.WriteLine($"Values are {i}");
+            //}
 
             //dict.Add(1, 10);
             //dict.Add(2, 20);
