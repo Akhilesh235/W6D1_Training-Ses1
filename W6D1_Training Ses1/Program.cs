@@ -58,9 +58,20 @@ namespace W6D1_Training_Ses1
             stk.Push(2);
             stk.Push(3);
             Console.WriteLine("size of stack " + stk.Count);
+            
             Console.WriteLine("popping last element");
             Console.WriteLine(stk.Pop());
+            
             Console.WriteLine("size of stack " + stk.Count);
+            
+            Console.WriteLine("peeking last element");
+            Console.WriteLine(stk.Peek());
+            Console.WriteLine("size of stack " + stk.Count);
+            
+            Console.WriteLine("clearing the stack");
+            stk.Clear();
+            Console.WriteLine("size of stack " + stk.Count);
+
 
             //Collections Example
             //List<int> list = new List<int>();
