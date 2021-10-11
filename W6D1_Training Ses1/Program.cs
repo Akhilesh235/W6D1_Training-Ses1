@@ -11,20 +11,64 @@ namespace W6D1_Training_Ses1
     {
         static void Main(string[] args)
         {
-            BigInteger bigInteger = new BigInteger(178546464654.3654);
-            Console.WriteLine(bigInteger);
-            BigInteger bigInteger2 = new BigInteger(454646464646546);
-            Console.WriteLine(bigInteger2);
+          
+            BigInteger bigInteger3;
+            Console.WriteLine("Input first big int: ");
+            bigInteger3 = BigInteger.Parse(Console.ReadLine());
+            BigInteger bigInteger4;
+            Console.WriteLine("Input second big int: ");
+            bigInteger4 = BigInteger.Parse(Console.ReadLine());
 
-            string str = "454646464646546";
-            BigInteger bigInteger3 = BigInteger.Parse(str);
-            Console.WriteLine("Value from string " + bigInteger3);
-
-
-            Console.WriteLine("Power of big int is : " + BigInteger.Pow(bigInteger,3));
-            Console.WriteLine("Add in big int is : " + BigInteger.Add(bigInteger,bigInteger2));
+            Console.WriteLine("Addition of both big int is : " + BigInteger.Add(bigInteger3, bigInteger4));
+            Console.WriteLine("Subtraction of both big int is : " + BigInteger.Subtract(bigInteger3, bigInteger4));
+            Console.WriteLine("Multiplication of both big int is : " + BigInteger.Multiply(bigInteger3, bigInteger4));
+            Console.WriteLine("Division of both big int is : " + BigInteger.Divide(bigInteger3, bigInteger4));
+            Console.WriteLine("Remainder of both big int is : " + BigInteger.Remainder(bigInteger3, bigInteger4));
             Console.ReadLine();
-            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //BigInteger bigInteger1 = new BigInteger (9090909009009009090);
+            //BigInteger bigInteger2 = new BigInteger(10101010101010101010);
+            //Console.WriteLine("Addition of both big int is : " + BigInteger.Add(bigInteger1, bigInteger2));
+            //Console.WriteLine("Subtraction of both big int is : " + BigInteger.Subtract(bigInteger1, bigInteger2));
+            //Console.WriteLine("Multiplication of both big int is : " + BigInteger.Multiply(bigInteger1, bigInteger2));
+            //Console.WriteLine("Division of both big int is : " + BigInteger.Divide(bigInteger1, bigInteger2));
+            //Console.WriteLine("Remainder of both big int is : " + BigInteger.Remainder(bigInteger1, bigInteger2));
+            //Console.ReadLine();
+
+
+
+            //BigInteger bigInteger = new BigInteger(178546464654.3654);
+            //Console.WriteLine(bigInteger);
+            //BigInteger bigInteger2 = new BigInteger(454646464646546);
+            //Console.WriteLine(bigInteger2);
+
+            //string str = "454646464646546";
+            //BigInteger bigInteger3 = BigInteger.Parse(str);
+            //Console.WriteLine("Value from string " + bigInteger3);
+
+
+            //Console.WriteLine("Power of big int is : " + BigInteger.Pow(bigInteger,3));
+            //Console.WriteLine("Add in big int is : " + BigInteger.Add(bigInteger,bigInteger2));
+            //Console.ReadLine();
+
             //Complex complex1 = new Complex(12.65, 6.69);
             //Console.WriteLine("Complex number is {0}" , complex1);
 
