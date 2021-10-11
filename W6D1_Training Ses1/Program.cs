@@ -4,6 +4,7 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace W6D1_Training_Ses1
 {
@@ -27,15 +28,35 @@ namespace W6D1_Training_Ses1
         }
         static void Main(string[] args)
         {
-            ValueTuple<int, string, string> valuetuple2 = (1, "someone", "john");
-            (int,string,string) valuetuple3 = (1, "someone", "john");
-            (int id, string fn, string ln) person = (1, "someone", "john");
-            Console.WriteLine(person.id);
-            Console.WriteLine(person.fn);
-            Console.WriteLine(person.ln);
+            var ukEn = new CultureInfo("en-GB");
+            var usEn = new CultureInfo("en-US");
+            var Frfr = new CultureInfo("fr-Fr");
+            Console.WriteLine(ukEn.DisplayName);
+            Console.WriteLine(usEn.DisplayName);
+            Console.WriteLine(Frfr.DisplayName);
+            Console.WriteLine();
 
-            Program p = new Program();
-            (int id, string firstname, string lastname) = p.getValueTuple();    //normal variables
+            Console.WriteLine(usEn.Parent.DisplayName);
+            Console.WriteLine(Frfr.Parent.DisplayName);
+            Console.WriteLine();
+
+            Console.WriteLine(usEn.DateTimeFormat.FirstDayOfWeek.ToString());
+            Console.WriteLine();
+
+            Console.WriteLine(usEn.DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek));
+            Console.WriteLine(ukEn.DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek));
+            Console.WriteLine(Frfr.DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek));
+
+
+            //ValueTuple<int, string, string> valuetuple2 = (1, "someone", "john");
+            //(int,string,string) valuetuple3 = (1, "someone", "john");
+            //(int id, string fn, string ln) person = (1, "someone", "john");
+            //Console.WriteLine(person.id);
+            //Console.WriteLine(person.fn);
+            //Console.WriteLine(person.ln);
+
+            //Program p = new Program();
+            //(int id, string firstname, string lastname) = p.getValueTuple();    //normal variables
             //Tuple<int, double, string> tuple = new Tuple<int, double, string>(1, 5.3, "John");
             //Console.WriteLine(tuple.Item1);
             //Console.WriteLine(tuple.Item2);
